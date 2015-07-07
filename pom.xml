@@ -11,6 +11,25 @@
 <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 </properties>
+ <build>
+<!--  Addition for Sonarqube, comment out if build fails   -->
+<pluginManagement>
+<plugins>
+<plugin>
+<groupId>org.jacoco</groupId>
+<artifactId>jacoco-maven-plugin</artifactId>
+<version>0.7.1.201405082137</version>
+<executions>
+<execution>
+<goals>
+<goal>prepare-agent</goal>
+</goals>
+</execution>
+</executions>
+</plugin>
+</plugins>
+</pluginManagement>
+</build>
   <modules>
     <module>common/</module>
     <module>modules/reference/partner-data-layer/</module>
